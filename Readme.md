@@ -25,7 +25,7 @@ En este proyecto hemos hecho uso de:
 * Herramienta GitHub
 ## Terminal PowerShell
 ***
-En este apartado os voy a mostra algunos de los operadores usados:
+En este apartado os voy a mostrar algunos de los operadores usados:
 * $and
 * $gte
 * $gt
