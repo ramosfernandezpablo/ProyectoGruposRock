@@ -1,4 +1,4 @@
-## Índice
+﻿## Índice
 1. [Información general sobre mi proyecto](#información-general-sobre-mi-proyecto)
 2. [Datos personales](#datos-personales)
 3. [Aplicaciones](#aplicaciones)
@@ -25,20 +25,23 @@ En este proyecto hemos hecho uso de:
 * Herramienta GitHub
 ## Terminal PowerShell
 ***
-Ahora voy a listar una serie de comando que he usado:
-* mongo --version: Nos devuelve la versión de MongoDB que estamos usando.
-* mongo: Este comando sirve para que entremos en Mongo.
-* cls: Limpia el terminal de comando para ver con mayor claridad los nuevos comandos que voy a aplicar.
-* db: Nos muestra la base de datos en la que estamos trabajando.
-* help: Con este comando PowerShell nos muestra una ayuda con una serie de comandos que podemos aplicar.
-* show dbs: Muestra las bases de datos creadas.
-* db.[nombre_Base_De_Datos].insertOne: Inserta un documento dentro de una colección, en mi caso, db.coleccionParticular.insertOne()
-* show collections: Muestra las colecciones que tenemos creados.
-* db.[nombre_Base_De_Datos].find(): Muestra los archivos dentro de una colección.
-* use [nombre_Base_Datos]: Crea una base de datos en el servidor de Mongo.
-* db.[nombre_Base_De_Datos].deleteMany: Borra muchos documentos a la vez de una colección.
-* load ("nombre_fichero"): Carga el archivo y lo ejecuta.
-* db.[nombre_Base_De_Datos].inserMany: Inserta varios documentos en una colección.
-* db.[nombre_Base_De_Datos].find().count(): Cuenta los documentos que se encuentran en una colección.
-* db.[nombre_Base_De_Datos].find({campo:"valor"}): Visualiza los documentos con el campo y valor especificados.
-* db.[nombre_Base_De_Datos].find({campo:{$eq: valor}}).pretty(): Visualiza los documentos con el campo y valor especificados mediante el operador equals y le añadimos un formato más elegante con el comando .pretty().
+En este apartado os voy a mostra algunos de los operadores usados:
+* $and
+* $gte
+* $gt
+* $lte
+* $lt
+* $regex
+* $eq
+* $ne
+* $or
+* $exist
+* $all
+* $in
+* $nor
+* $not
+* $nin
+* $elemMatch
+* $size
+* $rand
+* $expr
