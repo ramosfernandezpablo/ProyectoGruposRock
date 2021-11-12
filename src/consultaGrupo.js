@@ -1,7 +1,7 @@
 
 /*Con el pretexto de saber que grupos de musica escuchaba mi padre en un años de adolescencia 
 quiero filtrar, por aquellos grupos de musica rock que están comprendidos entre principio de 1969 y 
-finales de 1987      ok*/
+finales de 1979      ok*/
 
 db.coleccionGrupos.find
 (
@@ -96,7 +96,7 @@ db.coleccionGrupos.find
         
     },
 
-    {pais, nombreGrupo:1, web:1}
+    {pais:1, nombreGrupo:1, web:1}
 
 ).pretty()
 
@@ -122,7 +122,10 @@ db.coleccionGrupos.find
 
 ).pretty()
 
-/* -----------------------*/
+/*Mi padre quiere ir a ver un concierto de un grupo rock, pero como estamos a final de mes la cosa está un poco
+canina y su presupuesto es de 25€. Mi padre como encima de todo es un poco especialito, no se conforma con ver
+un grupo cualquiera, quiere ir a un concierto en el que el grupo sea de los 80 en adelante y que para colmo 
+sea un grupo conocido, es decir, que haya vendido bastante albumes como para declararse famoso*/
 
 db.coleccionGrupos.find
 ( 
@@ -151,7 +154,10 @@ db.coleccionGrupos.find
         
 ).pretty()
 
-/*-------------GRUPOS CON FECHA 01/01/1980 Y MAYORES Y PRECIO ENTRADA SEA MAYOR QUE 10€ Ó MENOR QUE 40 Y ESTE ACTUANDO AÚN Ó UNIDADES DE DISCO VENDIDAS SEAN MENOR A 500 UDS----------------- */
+/*Mi novia me ha regalado unas entradas para un concierto como regalo de Navidades. Yo como no soy curioso
+(nótese la ironía)he investigado cuanto se ha gastado en las entradas , que ha sido más o menos ó <10€ ó >40€. 
+El grupo es de los '80 y por último con esto de la pandemia es su última gira así que no se si podrá celebrarse
+dicho concierto o no, ó si venderá una serie de discos en concreto o por el contrario el COVID-19 se lo impedirá.*/
 
 db.coleccionGrupos.find
 ( 
@@ -191,7 +197,9 @@ db.coleccionGrupos.find
     {nombreGrupo:1, "discografia.unidadesVendidas":1}
 ).pretty()
 
-/*-----------GRUPOS YA RETIRADOS Y QUE UNIDADES VENDIDAS SEAN MAYOR QUE 500------------- */
+/*Mi abuelo me ha dicho que le ponga en Youtube un grupo de rock. Cual es mi sorpresa, que al meterme 
+en Wikipedia para informarme del grupo, todos sus componentes están muertos y en su discografía,
+la unidades de discos vendidas es superior a 500 unidades. */
 
 
 db.coleccionGrupos.find
@@ -206,7 +214,8 @@ db.coleccionGrupos.find
 ).pretty()
 
 
-/*--------------GENERO QUE NO EMPIECE POR HARD Y QUE EL PRECIO DE ENTRADA SEA MENOR A 30€---------- */
+/*Este finde toca en la Cartuja mi grupo favorito, su estilo es Pop Rock y Rock andaluz, pero para nada 
+el Hard rock. El inconveniente es que mi madre nada más me ha dado 15€, ¿podré ir a verlo? */
 
 
 db.coleccionGrupos.find
@@ -219,7 +228,8 @@ db.coleccionGrupos.find
     }, {genero:1, precioEntradaConcierto:1, nombreGrupo:1}
 ).pretty()
 
-/*----------------MUESTRA LOS GRUPOS QUE NACIERON EN UNA FECHA EN CONCRETO---------------- */
+/*Nos han mandado en el clase un trabajo en el que se investigue sobre los grupos de rock que se formaron
+el 11/05/1988 */
 
 
 db.coleccionGrupos.find
@@ -230,7 +240,7 @@ db.coleccionGrupos.find
 ).pretty()
 
 
-/*---------GRUPOS QUE NO LOS REPRESENTES ESAS DISCOGRAFICAS----- */
+/* Quiero encontrar los grupos que como discográfica no tenga las indicadas*/
 
 db.coleccionGrupos.find
 ( 
@@ -240,7 +250,8 @@ db.coleccionGrupos.find
 ).pretty()
 
 
-/*---- GRUPOS CON DICHOS GENEROS MUSICALES------------ */
+/*Yo soy mucho de coger los fines de semana y mientras limpio la casa, pongo una lista de reproducción
+filtrada por grupos que toquen los géneros Hard rock, Pop rock y Blues rock.*/
 
 db.coleccionGrupos.find
 ( 
@@ -249,7 +260,8 @@ db.coleccionGrupos.find
     }, {genero:1, nombreGrupo:1}
 ).pretty()
 
-/* MUESTRA AQUELLOS GRUPOS QUE HAN REALIZADO 4 GIRAS EN TOTAL*/
+/* Para Junio de 2022 tengo la entrada de un concierto y ésta es su cuarta gira. Muestrame que grupos
+que lleven 4 giras a ver si alguno de ellos es del concierto al que iré.*/
 
 db.coleccionGrupos.find
 ( 
